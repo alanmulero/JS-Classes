@@ -1,4 +1,7 @@
-class User {
+// Lembrando que para importação e exportação funcionar é preciso fazer algumas configurações.
+// no terminal: npm init -y
+// incluir chave: valor => "type": "module",
+export default class User {
     // As classes em JS usam uma função construtora.
     constructor(nome,email,nascimento,role,ativo = true) {
 
