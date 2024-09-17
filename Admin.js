@@ -1,22 +1,33 @@
 // Criar as classes sempre com letra maiusculas, por padrão.
 import User from "./User.js";
-class Admin extends User{
+import Docente from "./Docente.js";
+class Admin extends User {
 	// Passando o que eu quero que a classe herde. No construtor.
-	constructor(nome,email,nascimento,role="adimin",ativo="true"){
+	constructor(nome, email, nascimento, role = "adimin", ativo = "true") {
+		super(nome, email, nascimento, role, ativo)
 
-		super(nome,email,nascimento,role,ativo)
+	}
+	// Metodo para criar curso.
+	criaCurso(usuario,nomeCurso){
+		return usuario.curso = nomeCurso;
+	}
+
+	// Metodo excluir curso
+
+	excluiCurso(usuario,nomeCurso){
+		return delete usuario.curso;
+	}
+
+	//
+
 
 	}
 
-	criarCurso(nomeCurso,qtdVagas){
-		return `Curso ${nomeCurso} criado, com ${qtdVagas} vagas`;
-
-	}
-}
 
 // Instanciando classe filha admin.
 
-const novoAdmin = new Admin("Pituca","pituca@email.com","2002-01-01");
+const novoAdmin = new Admin("Ana","alan@email","04-09/2006","gerente adm",);
+novoAdmin.criaCurso(novoAdmin,'Java');
+//novoAdmin.excluiCurso(novoAdmin,'Java');
 console.log(novoAdmin);
-console.log(novoAdmin.exibirInfo());
-console.log(novoAdmin.criarCurso('Developer',20));
+
