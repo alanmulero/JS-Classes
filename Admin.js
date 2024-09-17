@@ -30,4 +30,7 @@ const novoAdmin = new Admin("Ana","alan@email","04-09/2006","gerente adm",);
 novoAdmin.criaCurso(novoAdmin,'Java');
 //novoAdmin.excluiCurso(novoAdmin,'Java');
 console.log(novoAdmin);
+// Testando encapsulamento com #
+const usuarioEncapsulado = new User('Neny','neny@email.com','2023-02-05');
+console.log(usuarioEncapsulado);
 

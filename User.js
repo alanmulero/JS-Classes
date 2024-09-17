@@ -3,9 +3,11 @@
 // incluir chave: valor => "type": "module",
 export default class User {
     // As classes em JS usam uma função construtora.
+    // Encapsulando com #
+    #nome; 
     constructor(nome,email,nascimento,role,ativo = true) {
 
-        this.nome = nome;
+        this.#nome = nome;
         this.email = email;
         this.nascimento = nascimento;
         this.role = role || "estudante"; // Passando um valor por padrão, quando não receber nada.
@@ -27,7 +29,7 @@ export default class User {
     // Instanciando elementos da classe.
     const novoUser = new User("Alan","alan@email.com","20/12/1969","Developer")
     console.log(novoUser);
-console.log(novoUser.exibirInfo())
+    console.log(novoUser.exibirInfo())
 
 
 
