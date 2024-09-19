@@ -31,8 +31,16 @@ novoAdmin.criaCurso(novoAdmin,'Java');
 //novoAdmin.excluiCurso(novoAdmin,'Java');
 console.log(novoAdmin);
 // Testando encapsulamento com #
-const usuarioEncapsulado = new User('Neny','neny@email.com','2023-02-05');
+const usuarioEncapsulado = new User('Neny','Gordona','neny@email.com','2023-02-05');
 console.log(usuarioEncapsulado);
 console.log(usuarioEncapsulado.nome); // agora usando o get()
+// Testando o setter()
+usuarioEncapsulado.nome = 'Nene Gorda';
+console.log(usuarioEncapsulado.nome);
+// testando set e get de email:
+console.log(usuarioEncapsulado.email);
+usuarioEncapsulado.email = 'novoemail@.com';
+console.log(usuarioEncapsulado.email);
+
 
 

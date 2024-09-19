@@ -4,10 +4,11 @@
 export default class User {
     // As classes em JS usam uma função construtora.
     // Encapsulando com #
-    #nome; #email; #nascimento; #role; #ativo;
-    constructor(nome, email, nascimento, role, ativo = true) {
+    #nome; #sobrenome;  #email; #nascimento; #role; #ativo;
+    constructor(nome,sobrenome, email, nascimento, role, ativo = true) {
 
         this.#nome = nome; // #nome é diferente de nome.
+        this.#sobrenome = nome;
         this.#email = email;
         this.#nascimento = nascimento;
         this.#role = role || "estudante"; // Passando um valor por padrão, quando não receber nada.
@@ -16,7 +17,10 @@ export default class User {
     }
     // Criando os getters
     get nome(){
-        return this.#nome
+        return this.#nome;
+    }
+    get sobrenome(){
+        return this.#sobrenome;
     }
     get email(){
         return this.#email;
@@ -29,6 +33,21 @@ export default class User {
     }
     get ativo(){
         return this.#ativo;
+    }
+
+    // setters
+    // juntando nome e sobrenome em uma unica saida
+    set nome(novoNome){
+    
+        this.#nome = novoNome;
+    }
+
+    set email(novoEmail){
+        if(!novoEmail.includes('@')){
+            throw new Error('Tem que ter o @ no email.')
+            
+        }else{
+        this.#email = novoEmail;}
     }
 
     
