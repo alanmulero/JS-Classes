@@ -1,7 +1,7 @@
 // Criar as classes sempre com letra maiusculas, por padrão.
 import User from "./User.js";
 import Docente from "./Docente.js";
-class Admin extends User {
+export default  class Admin extends User {
 	// Passando o que eu quero que a classe herde. No construtor.
 	constructor(nome, email, nascimento, role = "adimin", ativo = "true") {
 		super(nome, email, nascimento, role, ativo)

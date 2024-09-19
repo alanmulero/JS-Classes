@@ -4,20 +4,20 @@
 export default class User {
     // As classes em JS usam uma função construtora.
     // Encapsulando com #
-    #nome; 
+    #nome; #email; #nascimento; #role; #ativo;
     constructor(nome,email,nascimento,role,ativo = true) {
 
         this.#nome = nome;
-        this.email = email;
-        this.nascimento = nascimento;
-        this.role = role || "estudante"; // Passando um valor por padrão, quando não receber nada.
-        this.ativo = ativo;
+        this.#email = email;
+        this.#nascimento = nascimento;
+        this.#role = role || "estudante"; // Passando um valor por padrão, quando não receber nada.
+        this.#ativo = ativo;
 
     }
     // Os métodos fora da função construtora.
     exibirInfo()
     {
-        return `${this.nome} ,${this.email}, ${this.role}, ${this.ativo}`;
+        return `${this.#nome} ,${this.#email}, ${this.#role}, ${this.#ativo}`;
     }
 
 
