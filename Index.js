@@ -10,5 +10,6 @@ console.log(novoUser.exibirInfo());
 // Abaixo a forma encapsulada.
 //novoUser.#nome = 'Mulerinho';  = private, detalhe da #
 
-
+// Tentando exibir um método() privado, vou obter um erro.
+//console.log(#testaMetodoPrivado());
 

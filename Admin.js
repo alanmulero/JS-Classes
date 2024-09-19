@@ -33,4 +33,6 @@ console.log(novoAdmin);
 // Testando encapsulamento com #
 const usuarioEncapsulado = new User('Neny','neny@email.com','2023-02-05');
 console.log(usuarioEncapsulado);
+console.log(usuarioEncapsulado.nome); // agora usando o get()
+
 
