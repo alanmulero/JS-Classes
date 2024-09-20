@@ -7,7 +7,7 @@ export default class User {
     #nome; #email; #nascimento; #role; #ativo;
     constructor(nome,email,nascimento,role,ativo = true) {
 
-        this.#nome = nome;
+        this.#nome = nome; // #nome é diferente de nome.
         this.#email = email;
         this.#nascimento = nascimento;
         this.#role = role || "estudante"; // Passando um valor por padrão, quando não receber nada.
