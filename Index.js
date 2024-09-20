@@ -13,3 +13,7 @@ console.log(novoUser.exibirInfo());
 // Tentando exibir um método() privado, vou obter um erro.
 //console.log(#testaMetodoPrivado());
 
+// Testando metodo statico.
+const testaStatico = User.matriculaPaga('sim');
+console.log(testaStatico);
+

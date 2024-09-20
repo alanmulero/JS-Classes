@@ -66,7 +66,11 @@ export default class User {
     }
 
    
-
+    // Métodos staticos.
+    static matriculaPaga(texto){
+        // retorno na classe Index.js
+        return `A matricula esta paga? ${texto}`;
+    }
     
 
 }
